@@ -104,15 +104,3 @@ The `make flash` target does not erase the entire flash contents. However it is 
 
 This can be combined with other targets, ie `make erase_flash flash` will erase everything and then re-flash the new app, bootloader and init data bin.
 
-## Updating ESP8266_RTOS_SDK
-
-After some time of using ESP8266_RTOS_SDK-IDF, you may want to update it to take advantage of new features or bug fixes. The simplest way to do so is by deleting existing `ESP8266_RTOS_SDK` folder and cloning it again.
-
-Another solution is to update only what has changed. This method is useful if you have a slow connection to GitHub. To do the update run the following commands::
-
-```
-cd ~/esp/ESP8266_RTOS_SDK
-git pull
-```
-
-The ``git pull`` command is fetching and merging changes from ESP8266_RTOS_SDK repository on GitHub.
