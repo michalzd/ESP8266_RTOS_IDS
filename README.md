@@ -28,55 +28,25 @@ Besides the toolchain (that contains programs to compile and build the applicati
 
 ```
 cd ~/esp
-git clone https://github.com/espressif/ESP8266_RTOS_SDK.git
+git clone https://github.com/michalzd/ESP8266_RTOS_IDF.git
 ```
-
 ESP8266_RTOS_SDK will be downloaded into `~/esp/ESP8266_RTOS_SDK`.
 
-## Setup Path to ESP8266_RTOS_SDK
-
-The toolchain programs access ESP8266_RTOS_SDK using `IDF_PATH` environment variable. This variable should be set up on your PC, otherwise projects will not build. Setting may be done manually, each time PC is restarted. Another option is to set up it permanently by defining `IDF_PATH` in user profile.
-
-For manually, the command:
-```
-export IDF_PATH=~/esp/ESP8266_RTOS_SDK
-```
-
 ## Start a Project
-Now you are ready to prepare your application for ESP8266. To start off quickly, we can use `examples/get-started/project_template` project from `examples` directory in SDK.
+copy workspace/project_template to another folder
+start project configuration utility `menuconfig`
 
-Once you've found the project you want to work with, change to its directory and you can configure and build it.
+make menuconfig
+
+## Setup ESP8266_RTOS_SDK
+
+`IDF_PATH` environment variable set in project Makefile 
 
 ## Connect
 
 You are almost there. To be able to proceed further, connect ESP8266 board to PC, check under what serial port the board is visible and verify if serial communication works. Note the port number, as it will be required in the next step.
 
-## Configuring the Project
-
-Being in terminal window, go to directory of `project_template` application by typing `cd ~/esp/ESP8266_RTOS_SDK/examples/get-started/project_template`. Then start project configuration utility `menuconfig`:
-
-```
-cd ~/esp/ESP8266_RTOS_SDK/examples/get-started/project_template
-make menuconfig
-```
-
-In the menu, navigate to `Serial flasher config` > `Default serial port` to configure the serial port, where project will be loaded to. Confirm selection by pressing enter, save configuration by selecting `< Save >` and then exit application by selecting `< Exit >`.
-
-> Note:
-	On Windows, serial ports have names like COM1. On MacOS, they start with `/dev/cu.`. On Linux, they start with `/dev/tty`.
-
-Here are couple of tips on navigation and use of `menuconfig`:
-
-* Use up & down arrow keys to navigate the menu.
-* Use Enter key to go into a submenu, Escape key to go out or to exit.
-* Type `?` to see a help screen. Enter key exits the help screen.
-* Use Space key, or `Y` and `N` keys to enable (Yes) and disable (No) configuration items with checkboxes "`[*]`"
-* Pressing `?` while highlighting a configuration item displays help about that item.
-* Type `/` to search the configuration items.
-
-Once done configuring, press Escape multiple times to exit and say "Yes" to save the new configuration when prompted.
-
-## Compiling the Project
+ ## Compiling the Project
 
 `make all`
 
@@ -101,6 +71,8 @@ Exit the monitor by typing Ctrl-].
 To flash and monitor output in one pass, you can run:
 
 `make flash monitor`
+or 'screen /dev/ttyUSB0' 
+
 
 ## Compiling & Flashing Just the App
 
