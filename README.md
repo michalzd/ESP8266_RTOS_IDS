@@ -1,39 +1,11 @@
-# ESP8266 RTOS Software Development Kit IDF
-
-[![Documentation Status](https://readthedocs.com/projects/espressif-esp8266-rtos-sdk/badge/?version=latest)](https://docs.espressif.com/projects/esp8266-rtos-sdk/en/latest/?badge=latest)
-
-
-# ** IMPORTANT NOTICE **
+# ESP8266 RTOS Software Development Kit IDF 
+from 
+https://github.com/espressif/ESP8266_RTOS_SDK
 
 ## About this repository
-A new branching model is applied to this repository, which consists of a master branch and release branches.
-
-### 1. Master branch
-The master branch is an integration branch where bug fixes/features are gathered for compiling and functional testing.
-
-### 2. Release branch
-The release branch is where releases are maintained and hot fixes (with names like *release/v2.x.x*) are added.
-Please ensure that all your production-related work are tracked with the release branches.
-
-With this new model, we can push out bug fixes more quickly and achieve simpler maintenance.
-
-## Roadmap
-*ESP8266_RTOS_SDK*'s framework is quite outdated and different from the current *[esp-idf](https://github.com/espressif/esp-idf)* and we are planning to migrate *ESP8266_RTOS_SDK* to *esp-idf* eventually after *v2.0.0*.
-
-However, we will firstly provide a new version of ESP8266 SDK (*ESP8266_RTOS_SDK v3.0*), which shares the same framework with *esp-idf* (esp-idf style), as a work-around, because the multi-CPU architecture is not supported by *esp-idf* for the time being.
-
-Actions to be taken for *ESP8266_RTOS_SDK v3.0* include the following items:
-
-1. Modify the framework to esp-idf style
-2. Restructure some core libraries including Wi-Fi libraries and libmain
-3. Update some third-party libraries including FreeRTOS, lwIP, mbedTLS, noPoll, libcoap, SPIFFS, cJSON, wolfSSL, etc.
-4. Update some drivers
-5. Others
-
----
+Moje drobne zmiany i poprawki do oficjalnego SDK 
 
 # Developing With the ESP8266_RTOS_SDK
-
 ## Get toolchain
 
 v5.2.0
