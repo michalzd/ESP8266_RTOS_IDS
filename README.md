@@ -28,7 +28,7 @@ Besides the toolchain (that contains programs to compile and build the applicati
 
 ```
 cd ~/esp
-git clone https://github.com/michalzd/ESP8266_RTOS_IDF.git
+git clone https://github.com/michalzd/ESP8266_RTOS_IDS.git
 ```
 ESP8266_RTOS_SDK will be downloaded into `~/esp/ESP8266_RTOS_SDK`.
 
